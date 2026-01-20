@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Course Feedback</h1>
+    </header>
+
+    <main>
+        <p class="ethical-notice">
+            **Ethical Notice:** Your feedback is completely anonymous and will only be used by the course instructor and department for continuous course improvement.
+        </p>
+        
+        <form id="feedbackForm">
+            <fieldset>
+                <legend>Course and Instructor</legend>
+
+                <div>
+                    <label for="courseName">Course Name/ID:</label>
+                    <input type="text" id="courseName" name="courseName" 
+                           placeholder="e.g., CSC 101" required 
+                           aria-describedby="courseNameHint">
+                    <small id="courseNameHint" class="hint">Enter the full course name or ID.</small>
+                </div>
+
+                <div>
+                    <label for="instructorRating">Rate your teacher:</label>
+                    <select id="instructorRating" name="instructorRating" required>
+                        <option value="">-- Select a rating --</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Experience</legend>
+
+                <p>Did you find the assignments helpful? (Select one)</p>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="assignmentsYes" name="assignmentsHelpful" value="yes" required>
+                        <label for="assignmentsYes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="assignmentsNo" name="assignmentsHelpful" value="no">
+                        <label for="assignmentsNo">No</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="assignmentsNeutral" name="assignmentsHelpful" value="neutral">
+                        <label for="assignmentsNeutral">Neutral</label>
+                    </div>
+                </div>
+                
+                <p>Which topics were most interesting? (Select all that apply)</p>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="topic1" name="topics" value="topic1">
+                        <label for="topic1">Topic 1: Introduction</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="topic2" name="topics" value="topic2">
+                        <label for="topic2">Topic 2: Core Concepts</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="topic3" name="topics" value="topic3">
+                        <label for="topic3">Topic 3: Advanced Material</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="paceRating">Course Pace (1=Too Slow, 5=Too Fast): <span id="paceValue">3</span></label>
+                    <input type="range" id="paceRating" name="paceRating" 
+                           min="1" max="5" value="3" step="1" 
+                           oninput="document.getElementById('paceValue').textContent = this.value">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Final Comments</legend>
+                
+                <div>
+                    <label for="feedbackComments">Additional Feedback:</label>
+                    <textarea id="feedbackComments" name="feedbackComments" rows="5" 
+                              placeholder="Share any other thoughts, positive or negative, about your course experience..."
+                              aria-describedby="commentsHint"></textarea>
+                    <small id="commentsHint" class="hint">Your honest feedback is appreciated.</small>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+
+    <div id="confirmationState" class="hidden">
+        <h2>🎉 Thank You for Your Feedback!</h2>
+        <p>A summary of your key responses is below:</p>
+        <ul id="summaryList"></ul>
+        <button id="startNewSurvey">Start New Survey</button>
+    </div>
+
+    <script src="script.js"></script>
+    Reflection:
+  In designing this survey, I chose a simple and clean layout with clear spacing and high-contrast text for readability. 
+  I used a variety of input types such as text, select, radio, checkbox, range, and textarea to collect different forms of data. 
+  Validation is handled on the client side with required fields and helpful placeholder text for clarity. 
+  The CSS ensures accessibility through proper spacing and easy navigation on both mobile and desktop. 
+  I added a clear confirmation section to summarize responses and included an ethical notice to assure users that their data is private. 
+  Overall, my goal was to make the survey user-friendly, accessible, and respectful of privacy.
+</body>
+</html>
+
