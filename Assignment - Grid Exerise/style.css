@@ -1,0 +1,59 @@
+.container{
+   display: grid;
+   min-height: 100vh;
+
+
+   grid-template-areas:
+   'thing1 thing1 thing1 thing2'
+   'thing3 thing4 thing5 thing6'
+   'thing7 thing4 thing5 thing6'
+   'thing8 thing8 thing8 thing8'   ;
+}
+
+
+.thing1{
+   background-color: aqua;
+   grid-area: thing1;
+}
+
+
+.thing2{
+   background-color: red;
+   grid-area: thing2;
+}
+
+
+.thing3{
+   background-color: blue;
+   grid-area: thing3;
+}
+
+
+.thing4{
+   background-color: violet;
+   grid-area: thing4;
+}
+
+
+.thing5{
+   background-color: black;
+   grid-area: thing5;
+}
+
+
+.thing6{
+   background-color: orange;
+   grid-area: thing6;
+}
+
+
+.thing7{
+   background-color: yellow;
+   grid-area: thing7;
+}
+
+
+.thing8{
+   background-color: green;
+   grid-area: thing8;
+}

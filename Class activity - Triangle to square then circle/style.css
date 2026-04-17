@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blue;
+    animation: triangleTosquarethencirlce 4s ease-in infinite alternate;
+
+}
+
+@keyframes  triangleTosquarethencirlce    {
+    50% {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+ }
+
+    100% {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+        
+    }
+
+}
+
+
+
+
+
+
+
+

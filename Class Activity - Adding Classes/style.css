@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    position: relative;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    transition: all 0.5s ease;
+}
+
+#shape1 {
+    justify-self: start;
+    align-self: start;
+}
+
+#shape2 {
+    justify-self: end;
+    align-self: start;
+    border-radius: 50%;
+}
+
+#shape3 {
+    justify-self: start;
+    align-self: end;
+    transform: rotate(45deg);
+}
+
+#shape4 {
+    justify-self: end;
+    align-self: end;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #333;
+}
+
+.enable-animation #shape1:hover,
+.enable-animation #shape2:hover,
+.enable-animation #shape3:hover {
+    background-color: #ff5733;
+    box-shadow: 0 0 20px #ff5733;
+}
+
+.enable-animation #shape4:hover {
+    background-color: #ff5733;
+    filter: drop-shadow(0 0 20px #ff5733);
+}
+

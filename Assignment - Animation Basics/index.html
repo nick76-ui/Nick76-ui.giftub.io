@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Animation & Interactivity</h1>
+
+    <div class="card">
+        <h2>Task 1: Hover Lift</h2>
+        <p>Hover over me!</p>
+    </div>
+
+    <button class="btn">Task 2: Click Me</button>
+
+    <span class="badge">NEW</span>
+
+    <button id="toggleBtn">Task 4: Show Panel</button>
+    <div class="panel">
+        <h2>Task 4: Panel</h2>
+        <p>Animated panel content here.</p>
+    </div>
+
+    <div class="answers">
+        <h2>Exit Ticket Answers</h2>
+        <ol>
+            <li><strong>Transition 2px lift:</strong> transition: transform 200ms ease, box-shadow 200ms ease;</li>
+            <li><strong>Transform/Opacity:</strong> Use when you need smooth performance - they don't cause layout changes</li>
+            <li><strong>Reduced motion:</strong> @media (prefers-reduced-motion: reduce) { * { animation: none; } }</li>
+        </ol>
+
+        <h2>Part A: Concepts</h2>
+        <ol>
+            <li><strong>CSS Transition:</strong> Changes from one value to another over time. Four parts: property, duration, timing-function, delay. Example: transition: all 0.3s ease-in-out;</li>
+            <li><strong>Transition vs @keyframes:</strong> Transitions go from A to B once. Keyframes can go A→B→C→A and repeat. Use transition for simple hover effects, keyframes for complex animations.</li>
+            <li><strong>Transform-origin:</strong> Sets the point around which transform happens. Example: transform-origin: top left;</li>
+            <li><strong>Timing functions:</strong> ease (smooth start/end), linear (constant speed)</li>
+        </ol>
+
+        <h2>Part C: Reflection</h2>
+        <p>Motion improved understanding when showing interactive feedback like button presses and hover states. Motion distracted when animations were too fast or flashy. The 200ms duration with ease timing felt best for hover effects. For accessibility, I included reduced motion support to respect users who prefer less animation.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

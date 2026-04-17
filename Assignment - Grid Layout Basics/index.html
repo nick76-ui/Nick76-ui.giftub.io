@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Assignment - Grid Layout Basics
+</h1>
+  
+  <h2>Part A - Concepts</h2>
+  
+  <p><strong>1) Grid Container, Items & Tracks</strong><br>
+  Container is the parent. Items are children. Tracks are rows and columns.</p>
+  
+  <p><strong>2) FR Unit vs Percentages</strong><br>
+  FR divides space equally. Percentages don't account for gaps.</p>
+  
+  <p><strong>3) Repeat() & Minmax()</strong><br>
+  repeat(3, 1fr) makes 3 columns. minmax(200px, 1fr) makes min 200px, max 1fr.</p>
+  
+  <p><strong>4) Auto-fill vs Auto-fit</strong><br>
+  auto-fill creates empty columns. auto-fit stretches items to fill space.</p>
+  
+  <p><strong>5) Grid-column & Grid-row</strong><br>
+  grid-column: 1 / 3 spans columns. grid-row: 1 / 3 spans rows.</p>
+  
+  <p><strong>6) Grid-template-areas</strong><br>
+  Names grid areas so you can place items by name instead of numbers.</p>
+  
+  <p><strong>7) Justify-items vs Align-items</strong><br>
+  justify-items aligns left-right. align-items aligns top-bottom.</p>
+  
+  <p><strong>8) Grid-auto-flow: Dense</strong><br>
+  Fills empty gaps by moving items. Don't use it often.</p>
+  
+  <h2>Part B - Tasks</h2>
+  
+  <h3>Task 1 - Cards</h3>
+  <div class="cards">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+    <div class="card">7</div>
+    <div class="card">8</div>
+  </div>
+  
+  <h3>Task 2 - Layout</h3>
+  <div class="layout">
+    <div class="header">Messi</div>
+    <div class="sidebar">Maradona</div>
+    <div class="main">Neymar</div>
+    <div class="footer">Ronaldinho</div>
+  </div>
+</body>
+</html>

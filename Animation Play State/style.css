@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: moveLeftToRight 4s ease-in-out infinite;
+}
+
+.square.paused {
+    animation-play-state: paused;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    color: white;
+    background-color: cyan;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes moveLeftToRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(calc(100vw - 200px)); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+
+
+
+

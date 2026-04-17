@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.diamond {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.triangle1,
+.triangle2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.triangle1 {
+    border-width: 50px 50px 0 50px;
+    border-color: #3498db transparent transparent transparent;
+    top: 0;
+    left: 0;
+}
+
+.triangle2 {
+    border-width: 0 50px 50px 50px;
+    border-color: transparent transparent #e74c3c transparent;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes rotateCW {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateCCW {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.diamond.rotating .triangle1 {
+    animation: rotateCW 2s linear infinite;
+}
+
+.diamond.rotating .triangle2 {
+    animation: rotateCCW 2s linear infinite;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+button.pause {
+    background: #e74c3c;
+}
+
+button.pause:hover {
+    background: #c0392b;
+}
