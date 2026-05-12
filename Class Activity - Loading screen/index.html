@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="stage" aria-hidden="true">
+        <div class="loader" id="loader">
+            <div class="frame phone" data-step="phone"></div>
+            <div class="frame tablet" data-step="tablet"></div>
+            <div class="frame monitor" data-step="monitor"></div>
+            <div class="frame watch" data-step="watch"></div>
+
+            <div class="sparkles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="bar" aria-hidden="true"></div>
+        </div>
+    </div>
+
+    <script>
+        const loader = document.getElementById('loader');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReduced) {
+            loader.classList.add('done');
+        } else {
+            setTimeout(() => loader.classList.add('to-monitor'), 350);
+            setTimeout(() => loader.classList.add('to-tablet'), 1050);
+            setTimeout(() => loader.classList.add('to-phone'), 1750);
+            setTimeout(() => loader.classList.add('done'), 2450);
+        }
+    </script>
+</body>
+
+</html>
