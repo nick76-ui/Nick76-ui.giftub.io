@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Nick76 UI Giftub</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1 class="title">Nick76 UI</h1>
+        <div class="topbar-actions">
+            <a class="btn" id="signInLink" href="/signin.html" aria-label="Go to sign in">Sign in</a>
+            <button class="btn" id="logoutBtn" type="button" hidden>Log out</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card" id="signedOutView" hidden>
+            <h2>Sign in required</h2>
+            <p>You must sign in to view all projects.</p>
+            <a class="btn btn-primary" href="/signin.html">Go to Sign in</a>
+        </section>
+
+        <section class="card" id="signedInView">
+            <h2>All Projects</h2>
+            <p class="muted">Click a project to open its page.</p>
+            <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="/home.js" defer></script>
+</body>
+
+</html>
